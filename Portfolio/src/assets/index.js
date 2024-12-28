@@ -21,7 +21,7 @@ import machinelearning from "./tech/machinelearning.png";
 import python from "./tech/python.png";
 import threejs from "./tech/threejs.svg";
 
-import octanet from "./company/octanet.png";
+import octanet from "./company/Octanet.png";
 import internshala from "./company/internshala.png";
 import prodigy from "./company/prodigy.png";
 
