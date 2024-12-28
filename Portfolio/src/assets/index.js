@@ -21,7 +21,6 @@ import machinelearning from "./tech/machinelearning.png";
 import python from "./tech/python.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
 import octanet from "./company/octanet.png";
 import internshala from "./company/internshala.png";
 import prodigy from "./company/prodigy.png";
@@ -60,7 +59,6 @@ export {
   machinelearning,
   python,
   threejs,
-  meta,
   octanet,
   internshala,
   prodigy,
