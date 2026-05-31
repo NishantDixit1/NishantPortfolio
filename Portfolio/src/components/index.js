@@ -9,6 +9,10 @@ import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import Stats from "./Stats";
+import Highlights from "./Highlights";
+import Skills from "./Skills";
+import Expertise from "./Expertise";
 
 
 export {
@@ -22,7 +26,11 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
-  EarthCanvas, 
+  Stats,
+  Highlights,
+  Skills,
+  Expertise,
+  EarthCanvas,
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas

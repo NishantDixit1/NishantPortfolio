@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { CALENDLY_URL } from "../constants";
 
 const Contact = () => {
   const formRef = useRef();
@@ -114,12 +115,23 @@ const Contact = () => {
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <div className='flex flex-wrap items-center gap-4'>
+            <button
+              type='submit'
+              className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+
+            <a
+              href={CALENDLY_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-[#915EFF] hover:bg-[#7c4dff] transition-colors py-3 px-8 rounded-xl w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              Book a Free Call
+            </a>
+          </div>
         </form>
       </motion.div>
 
