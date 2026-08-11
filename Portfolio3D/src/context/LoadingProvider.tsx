@@ -29,14 +29,35 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setLoading,
   };
   useEffect(() => {
-    // Auto-start animations on mobile since there's no 3D model
+    // On phones there is no loading screen to finish, so the intro timeline is
+    // kicked off directly.
     if (window.innerWidth <= 768) {
       import("../components/utils/initialFX").then((module) => {
-        if (module.initialFX) {
+        if (!module.initialFX) return;
+        setTimeout(() => {
+          module.initialFX();
+
+          // Failsafe. The intro sets the hero, header and social icons to
+          // opacity 0 before animating them in. If that timeline never
+          // advances the page would stay blank, so once it has had time to
+          // play, anything still hidden is revealed.
           setTimeout(() => {
-            module.initialFX();
-          }, 100);
-        }
+            const probe = document.querySelector<HTMLElement>(
+              ".landing-intro h1 .split-char"
+            );
+            if (probe && Number(getComputedStyle(probe).opacity) > 0.9) return;
+
+            document
+              .querySelectorAll<HTMLElement>(
+                ".split-char, .split-h2, .landing-info-h2, .header, .icons-section, .nav-fade"
+              )
+              .forEach((el) => {
+                el.style.opacity = "1";
+                el.style.filter = "none";
+                el.style.transform = "none";
+              });
+          }, 3000);
+        }, 100);
       });
     }
   }, []);

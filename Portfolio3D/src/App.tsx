@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
-const CharacterModel = lazy(() => import("./components/Character"));
+import SafeCharacter from "./components/SafeCharacter";
 const MainContainer = lazy(() => import("./components/MainContainer"));
 const MyWorks = lazy(() => import("./pages/MyWorks"));
 const Play = lazy(() => import("./pages/Play"));
@@ -19,9 +19,7 @@ const App = () => {
             <LoadingProvider>
               <Suspense>
                 <MainContainer>
-                  <Suspense>
-                    <CharacterModel />
-                  </Suspense>
+                  <SafeCharacter />
                 </MainContainer>
               </Suspense>
             </LoadingProvider>
