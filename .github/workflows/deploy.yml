@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Portfolio
+        working-directory: Portfolio3D
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,17 +27,26 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: Portfolio/package-lock.json
+          cache-dependency-path: Portfolio3D/package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
+        # Pages serves this repo from /NishantPortfolio/, so the bundle and the
+        # router are told about that prefix at build time.
+        env:
+          VITE_BASE: /NishantPortfolio/
         run: npm run build
+
+      - name: Add SPA fallback
+        # The app uses client-side routing (/myworks, /play). Pages has no
+        # rewrite rule, so a copy of index.html is served for unknown paths.
+        run: cp dist/index.html dist/404.html
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Portfolio/dist
+          publish_dir: ./Portfolio3D/dist
           publish_branch: gh-pages
