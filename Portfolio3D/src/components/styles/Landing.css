@@ -556,3 +556,23 @@ h2.landing-info-h2 {
   display: flex;
   flex-direction: column;
 }
+/* ─────────────────────────────────────────────────────────────
+   Mobile safety net.
+   The intro timeline (initialFX) sets these to opacity 0 and then animates
+   them in. On phones that timeline can fail to run, which left the hero,
+   header and social icons permanently invisible. Small screens skip the
+   animation and show the finished state instead.
+   ───────────────────────────────────────────────────────────── */
+@media only screen and (max-width: 768px) {
+  .split-char,
+  .split-line,
+  .split-h2,
+  .landing-info-h2,
+  .header,
+  .icons-section,
+  .nav-fade {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

@@ -1,3 +1,5 @@
+import { asset } from "./utils/asset";
+
 export const config = {
   developer: {
     name: "Nishant Dixit",
@@ -108,7 +110,7 @@ export const config = {
       category: "AI · Full Stack",
       technologies:
         "FastAPI, Python, PostgreSQL, SQLAlchemy, Anthropic Claude, OpenAI, AWS S3, Docker",
-      image: "/images/projects/ai-interview-platform.jpg",
+      image: asset("images/projects/ai-interview-platform.jpg"),
       description:
         "An end-to-end AI hiring platform with 175 REST endpoints. It parses resumes, screens candidates against a role, generates adaptive interview questions, and grades answers asynchronously. Two LLM providers are wired in with fallback, so a provider outage degrades quality rather than breaking the pipeline.",
       link: "https://github.com/NishantDixit1/interviewIQ",
@@ -119,7 +121,7 @@ export const config = {
       category: "Backend · System Design",
       technologies:
         "Java 21, Spring Boot 3.4, PostgreSQL, MyBatis, JWT, Spring AOP, Agora RTC",
-      image: "/images/projects/hiring-backend.jpg",
+      image: asset("images/projects/hiring-backend.jpg"),
       description:
         "The production backend behind an AI hiring product. 30+ endpoints across tenant, project and candidate-lifecycle APIs, with authorization enforced at the annotation level, 12 MyBatis mappers over PostgreSQL, and scheduled jobs that automate a candidate's entire lifecycle from credit expiry to deadline reminders.",
       link: "",
@@ -129,7 +131,7 @@ export const config = {
       title: "AI Sales CRM",
       category: "AI · Full Stack",
       technologies: "React, Vite, Node.js, Express, MongoDB, JWT, OpenRouter, Tailwind",
-      image: "/images/projects/ai-sales-crm.jpg",
+      image: asset("images/projects/ai-sales-crm.jpg"),
       description:
         "A CRM where the pipeline is a working board: leads move through New, Qualified, Proposal, Won and Lost by drag and drop, with deal value and priority on every card. AI reads each deal's own history to summarize it, draft the follow-up email, and suggest the next step. Pipeline health is computed from live data.",
       link: "https://github.com/NishantDixit1/SalesFlow-AI",
@@ -140,7 +142,7 @@ export const config = {
       category: "Full Stack · Real-time",
       technologies:
         "Next.js, TypeScript, Node.js, Express, Socket.IO, MongoDB, Mongoose, Zod, Cloudinary",
-      image: "/images/projects/techmarket.jpg",
+      image: asset("images/projects/techmarket.jpg"),
       description:
         "A two-sided marketplace connecting hirers with developers. Hirers post projects, developers submit proposals and bids, and the two sides talk over real-time chat backed by a dedicated Socket.IO server. Built as a TypeScript monorepo with a shared models package used by both the app and the chat service.",
       link: "https://techmarket.stackwrights.com",
@@ -150,7 +152,7 @@ export const config = {
       title: "NeuroRiskX, Explainable Stroke Risk",
       category: "AI · Machine Learning",
       technologies: "FastAPI, scikit-learn, SHAP, Python, Pandas",
-      image: "/images/projects/neuroriskx.jpg",
+      image: asset("images/projects/neuroriskx.jpg"),
       description:
         "A stroke-risk model where the explanation is a first-class output. Every scored assessment returns a per-patient SHAP breakdown, and the score is shown against the decision threshold it was actually judged against. A what-if panel rescores against the live model, so a clinician can interrogate it rather than trust a black box.",
       link: "https://github.com/NishantDixit1/NeuroRiskX",
@@ -160,7 +162,7 @@ export const config = {
       title: "Job Application Tracker",
       category: "AI · Full Stack",
       technologies: "Next.js 16, TypeScript, PostgreSQL, Prisma, Tailwind",
-      image: "/images/projects/job-tracker.jpg",
+      image: asset("images/projects/job-tracker.jpg"),
       description:
         "An AI-assisted tracker for a live job search. Paste a job posting and it pulls out the company, role, location and key requirements, then tracks every application across Kanban and list views from Applied through to Offer.",
       link: "https://job-application-tracker-q7kr.vercel.app",
@@ -170,7 +172,7 @@ export const config = {
       title: "Scan to Order",
       category: "Full Stack · Product",
       technologies: "Next.js, TypeScript, PostgreSQL, Prisma, Tailwind",
-      image: "/images/projects/scan-to-order.jpg",
+      image: asset("images/projects/scan-to-order.jpg"),
       description:
         "QR dine-in ordering. A guest scans the table code, browses a photo menu, and orders from their phone; the kitchen sees the ticket immediately. No app install, no waiting to flag someone down.",
       link: "https://scan-to-order-three.vercel.app",
