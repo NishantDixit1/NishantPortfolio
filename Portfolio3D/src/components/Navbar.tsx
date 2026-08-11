@@ -22,8 +22,13 @@ const Navbar = () => {
       infinite: false,
     });
 
-    // Start paused
-    lenis.stop();
+    // Paused until the loading screen hands over (initialFX calls start()).
+    // Phones have no loading screen, and initialFX can run before this effect
+    // creates Lenis, in which case its start() call is a no-op and scrolling
+    // would stay locked. So on small screens it starts unpaused.
+    if (window.innerWidth > 768) {
+      lenis.stop();
+    }
 
     // Handle smooth scroll animation frame
     function raf(time: number) {

@@ -3,9 +3,13 @@
   display: none;
 }
 
-/* Phones keep the 3D character; the still photo is the fallback only when
-   the model cannot run (see .mobile-photo below). */
+/* The 3D character stays off on phones: its scroll timelines are tuned for
+   desktop and running it here broke page scrolling. The still photo is used
+   instead. */
 @media only screen and (max-width: 768px) {
+  .character-model {
+    display: none !important;
+  }
 
   .landing-section,
   .landing-container {
@@ -123,7 +127,7 @@
 
   /* Show mobile photo */
   .mobile-photo {
-    display: none;
+    display: block;
     position: relative !important;
     width: 100%;
     max-width: 380px;

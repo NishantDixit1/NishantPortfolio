@@ -45,6 +45,10 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
             const probe = document.querySelector<HTMLElement>(
               ".landing-intro h1 .split-char"
             );
+            // Scrolling is unlocked by initialFX; make sure it is never left
+            // locked on a phone even if that timeline misfired.
+            document.body.style.overflowY = "auto";
+
             if (probe && Number(getComputedStyle(probe).opacity) > 0.9) return;
 
             document
