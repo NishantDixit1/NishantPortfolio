@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { config } from "../config";
 import "./MyWorks.css";
 
 const MyWorks = () => {
+  // No Navbar on this route means no Lenis, and the global body lock would
+  // otherwise make the page unscrollable on desktop.
+  useEffect(() => {
+    document.body.classList.add("native-scroll");
+    return () => document.body.classList.remove("native-scroll");
+  }, []);
+
   // Handle project click
   const handleProjectClick = (link: string) => {
     if (link) {

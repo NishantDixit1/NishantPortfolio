@@ -63,6 +63,13 @@ Rules:
 7. Use occasional emoji to keep it warm 😊`;
 
 const Play = () => {
+  // No Navbar on this route means no Lenis, and the global body lock would
+  // otherwise make the page unscrollable on desktop.
+  useEffect(() => {
+    document.body.classList.add("native-scroll");
+    return () => document.body.classList.remove("native-scroll");
+  }, []);
+
   const [game, setGame] = useState(new Chess());
   const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
   const [possibleMoves, setPossibleMoves] = useState<Square[]>([]);

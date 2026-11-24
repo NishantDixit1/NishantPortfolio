@@ -6,11 +6,11 @@ export const config = {
     fullName: "Nishant Dixit",
     title: "Software Engineer",
     // the two lines of the animated hero heading, and the loading marquee
-    titleLine1: "Backend & AI",
+    titleLine1: "Full-Stack & AI",
     titleLine2: "Engineer",
-    availability: "Open to backend, full-stack and AI engineering roles.",
+    availability: "Open to full-stack, AI and product engineering roles, and to freelance builds.",
     description:
-      "Software Engineer specializing in multi-tenant backends, REST APIs, and LLM-powered products. I take systems from architecture to production: Java 21 / Spring Boot and FastAPI on the backend, Anthropic Claude and OpenAI for the intelligence layer.",
+      "Software engineer who ships whole products: web apps, mobile apps, SaaS platforms, e-commerce stores and the automation behind them. Java 21 / Spring Boot and FastAPI on the backend, React and Next.js on the front, Anthropic Claude and OpenAI where intelligence earns its place.",
   },
   social: {
     github: "NishantDixit1",
@@ -20,7 +20,7 @@ export const config = {
   about: {
     title: "About Me",
     description:
-      "I build production backends and AI systems that ship. At Supercoder I owned the backend for an AI-driven hiring platform: multi-tenant REST services, the SQL that powered them, and the LLM layer that made the product intelligent. I care about the parts users never see but always feel, correctness, security, and things that do not break at 2am.",
+      "I build and ship whole products, not just the parts behind them. At Supercoder I owned the backend for an AI-driven hiring platform: multi-tenant REST services, the SQL that powered them, and the LLM layer that made it intelligent. Alongside that I have shipped mobile apps to both stores, SaaS platforms, e-commerce stores and WordPress sites, and the automation that keeps them running. I care about the parts users never see but always feel, correctness, security, and things that do not break at 2am.",
   },
   experiences: [
     {
@@ -51,7 +51,7 @@ export const config = {
     {
       position: "Software Engineer (SDE 1)",
       company: "Supercoder",
-      period: "02-2025 - 07-2026",
+      period: "02-2024 - 10-2026",
       location: "Remote",
       description:
         "Owned the backend for an AI-driven hiring platform. Designed multi-tenant REST services, authored the data layer that powered them, and integrated the LLM and real-time recording systems the product ran on.",
@@ -77,7 +77,7 @@ export const config = {
     {
       position: "Programmer Analyst Trainee",
       company: "Cognizant",
-      period: "11-2024 - 01-2025",
+      period: "11-2023 - 02-2024",
       location: "Coimbatore, Tamil Nadu",
       description:
         "Completed Cognizant's training program in SQL, DBMS, Python and Data Warehousing, applying ETL patterns and data modeling across relational schema design, query optimization and warehouse-load workflows.",
@@ -176,6 +176,77 @@ export const config = {
       description:
         "QR dine-in ordering. A guest scans the table code, browses a photo menu, and orders from their phone; the kitchen sees the ticket immediately. No app install, no waiting to flag someone down.",
       link: "https://scan-to-order-three.vercel.app",
+    },,
+    {
+      id: 8,
+      title: "StackWrights LMS",
+      category: "SaaS · Multi-Tenant",
+      technologies:
+        "FastAPI, PostgreSQL (row level security), Next.js, Redis, Docker, Razorpay",
+      image: asset("images/projects/lms.jpg"),
+      description:
+        "A multi-tenant course platform where every institute gets its own site. Courses and lessons, an exam engine timed on the server rather than in the browser, certificates issued on completion and verifiable from a link, payments and payouts, and an admin the business runs it all from. Tenant isolation is enforced by Postgres row level security, in the database rather than in route handlers.",
+      link: "https://lms.stackwrights.com",
+    },
+    {
+      id: 9,
+      title: "ERIN Store",
+      category: "E-commerce · Full Stack",
+      technologies: "Next.js, Django, PostgreSQL, Razorpay, Shiprocket",
+      image: asset("images/projects/erinshop.jpg"),
+      description:
+        "A fashion store built end to end: catalogue with real variants and stock, guest checkout with PIN code delivery estimates and live shipping quotes, GST invoices, and an admin where the team runs orders, inventory, dispatch and returns. Payment is confirmed only by a signature-verified webhook, never by the browser.",
+      link: "https://erinshop.in",
+    },
+    {
+      id: 10,
+      title: "Oven Support",
+      category: "WordPress · WooCommerce",
+      technologies: "WordPress, WooCommerce, Elementor, PHP",
+      image: asset("images/projects/ovensupport.jpg"),
+      description:
+        "An oven cleaning service covering the UK. Service pages, per-area local pages built for search, and a free quote flow that turns a visitor into an enquiry with the job details already captured.",
+      link: "https://oven.support",
+    },
+    {
+      id: 11,
+      title: "The Stitch Company",
+      category: "WordPress · WooCommerce",
+      technologies: "WordPress, WooCommerce, Elementor, PHP",
+      image: asset("images/projects/stitchcompany.jpg"),
+      description:
+        "A WooCommerce store for handmade bags and accessories, built around the craftspeople who make them. Product catalogue, cart and checkout, with the maker story carried through the shop rather than parked on a separate page.",
+      link: "https://stitchcompany.in",
+    },
+    {
+      id: 12,
+      title: "Astera Tours",
+      category: "WordPress · Travel",
+      technologies: "WordPress, WooCommerce, PHP",
+      image: asset("images/projects/asteratours.jpg"),
+      description:
+        "Tour packages sold online rather than quoted by email. Priced itineraries by destination, from a day trip to a multi-state tour, with booking and online payment handled on the site.",
+      link: "https://asteratours.com",
+    },
+    {
+      id: 13,
+      title: "Anti-Aging & Laser Institute",
+      category: "WordPress · Healthcare",
+      technologies: "WordPress, Elementor, PHP",
+      image: asset("images/projects/aalinstitute.jpg"),
+      description:
+        "A medical spa in Providence, Rhode Island. Treatment and membership pages, seasonal specials, reviews and a blog, all feeding one booking call to action that runs through the site rather than the phone.",
+      link: "https://aalinstitute.com",
+    },
+    {
+      id: 14,
+      title: "Vrindavan Tours",
+      category: "Web · Booking",
+      technologies: "Next.js, SEO, Booking & enquiry flow",
+      image: asset("images/projects/vrindavantours.jpg"),
+      description:
+        "A tour booking and enquiry site for Mathura and Vrindavan trips, built so a first-time visitor lands on a package and leaves as a specific enquiry rather than a contact form submission.",
+      link: "https://vrindavantours.com",
     },
   ],
   contact: {
@@ -187,16 +258,24 @@ export const config = {
   },
   skills: {
     develop: {
-      title: "BACKEND & AI ENGINEER",
-      description: "Production backends, APIs & LLM-powered systems",
+      title: "FULL-STACK & AI ENGINEER",
+      description: "Web apps, mobile apps, SaaS, e-commerce & automation",
       details:
-        "Designing multi-tenant backends and REST APIs in Java 21 / Spring Boot and FastAPI, over PostgreSQL, then wiring in the LLM layer with Anthropic Claude and OpenAI. From architecture through to deployment on AWS and Docker.",
+        "I take a product from an idea to something live on a real domain: the interface in React and Next.js, the backend in Java 21 / Spring Boot or FastAPI over PostgreSQL, mobile in React Native and Flutter, and the automation and LLM layer where it earns its place. WordPress and WooCommerce when that is the right call rather than a custom build.",
       tools: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
         "Java 21",
         "Spring Boot",
         "FastAPI",
         "PostgreSQL",
-        "TypeScript",
+        "MongoDB",
+        "React Native",
+        "Flutter",
+        "WordPress",
+        "WooCommerce",
         "Anthropic Claude",
         "AWS",
         "Docker",

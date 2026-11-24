@@ -37,6 +37,14 @@ body {
   overflow: hidden;
 }
 
+/* The lock above exists so the home page can be driven by Lenis smooth
+   scroll. Routes that render without the Navbar have no Lenis to drive
+   them, so they opt back into native scrolling or they cannot scroll at
+   all on desktop. */
+body.native-scroll {
+  overflow: auto;
+}
+
 /* Allow scrolling on mobile */
 @media only screen and (max-width: 768px) {
   body {
