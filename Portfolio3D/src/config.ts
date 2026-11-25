@@ -176,7 +176,7 @@ export const config = {
       description:
         "QR dine-in ordering. A guest scans the table code, browses a photo menu, and orders from their phone; the kitchen sees the ticket immediately. No app install, no waiting to flag someone down.",
       link: "https://scan-to-order-three.vercel.app",
-    },,
+    },
     {
       id: 8,
       title: "StackWrights LMS",

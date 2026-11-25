@@ -1,7 +1,6 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
 import { config } from "../config";
-import myPic from "../assets/mypic.png";
 
 
 const Landing = ({ children }: PropsWithChildren) => {
@@ -31,10 +30,6 @@ const Landing = ({ children }: PropsWithChildren) => {
               <div className="landing-h2-info">{config.developer.titleLine1} </div>
               <div className="landing-h2-info"> {config.developer.titleLine2}</div>
             </h2>
-          </div>
-          {/* Mobile photo - shows only on mobile when 3D character is hidden */}
-          <div className="mobile-photo">
-            <img src={myPic} alt="Nishant" />
           </div>
         </div>
         {children}
